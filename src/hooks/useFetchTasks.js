@@ -25,7 +25,8 @@ export const useFetchTasks = () => {
             method: "GET",
             headers: {
               "Content-Type": "application/json",
-              "authorization":`Bearer ${user.token}`
+              "authorization":`Bearer ${user.token}`,
+              "Access-Control-Allow-Origin": "*"
             },
           });
           

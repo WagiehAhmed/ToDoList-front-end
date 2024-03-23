@@ -31,7 +31,8 @@ export const useAddTask = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
-            "authorization":`Bearer ${user.token}`
+            "authorization":`Bearer ${user.token}`,
+            "Access-Control-Allow-Origin": "*"
           },
           body: JSON.stringify(taskData),
         });

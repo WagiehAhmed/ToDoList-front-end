@@ -22,11 +22,11 @@ export const useSignup = () => {
         //fetch request to server for registering the new user
         const response = await fetch(`${serverUrl}api/users/signup`, {
           method: "POST",
+          mode:"cors",
           headers: {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin" : "*",
           },
-          mode:"cors",
           // mode: "no-cors",
           body: JSON.stringify(userData),
         });

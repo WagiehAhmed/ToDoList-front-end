@@ -12,6 +12,7 @@ import {formatDistanceToNow} from "date-fns"
 import { useUserContext } from "../hooks/useUserContext";
 import { useTasksContext } from "../hooks/useTasksContext";
 import { useAlertContext } from "../hooks/useAlertContext";
+import { serverUrl } from './../util/serverUrl';
 
 const Task = ({ taskData,isLoading }) => {
   const [loading, setLoading] = useState(null);
@@ -33,7 +34,7 @@ const Task = ({ taskData,isLoading }) => {
     try {
       //fetch request to server with the user data
       const response = await fetch(
-        `http://localhost:2000/api/tasks/${task._id}`,
+        `${serverUrl}api/tasks/${task._id}`,
         {
           method: "DELETE",
           headers: {

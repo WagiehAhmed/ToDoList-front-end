@@ -26,7 +26,7 @@ export const useSignup = () => {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin" : "*",
           },
-          model:"cors",
+          mode:"cors",
           // mode: "no-cors",
           body: JSON.stringify(userData),
         });

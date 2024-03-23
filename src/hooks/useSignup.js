@@ -24,8 +24,9 @@ export const useSignup = () => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            "Access-Control-Allow-Credentials": "*"
           },
-          mode: "no-cors",
+          // mode: "no-cors",
           body: JSON.stringify(userData),
         });
 
